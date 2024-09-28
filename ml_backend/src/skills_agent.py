@@ -16,3 +16,14 @@ class SkillsAgent:
         user_prompt = "Experience :" + experience_text + "\n Skills: " + skills_text
         
         return self.llama_agent.generate(system_prompt, user_prompt, max_new_tokens=10)
+    
+    def get_skills_relevance_score(self, role, skills_text, ideal_skills_list, experience_text):
+        system_prompt = f"Your role is to score the skills provided by \
+                            a candidate applying for the role of {role}. \
+                            You are provided the candidate's experienence along with his skills. \
+                            You are also given a set of \"Expected Skills\" which are usually \
+                            the kind of skills required for this role. Give an overall score of the candidate from 1 to 5. \
+                            Do not respond with anything other than the overall score. The output should be JSON with a single key, overall_score."
+        user_prompt = "Experience :" + experience_text + "\n Expected Skill: " + str(ideal_skills_list) + "\n Candidate Skills: " + skills_text + "\n Overall Score: "
+        
+        return self.llama_agent.generate(system_prompt, user_prompt, max_new_tokens=10)
