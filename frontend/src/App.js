@@ -1,10 +1,16 @@
 import ApplicantsPageOutlet from "./components/ApplicantsPageOutlet";
+import Navbar from "./components/Navbar";
 import RolesOutlet from "./components/RolesOutlet";
 import ApplicantDetailsPage from "./pages/ApplicantDetailsPage";
 import ApplicantsPage from "./pages/ApplicantsPage";
 import RolesEditor from "./pages/RolesEditor";
 import PositionsPage from "./pages/RolesPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 const App = () => {
   const headings = ["Name", "Age", "Location"];
@@ -15,22 +21,26 @@ const App = () => {
   ];
 
   return (
-    <div className="w-full mx-auto p-4 min-h-screen">
+    <div className="w-full mx-auto min-h-screen">
       <Router>
-        <Routes>
-          <Route
-            path="/candidates/:positionId"
-            element={<ApplicantsPageOutlet />}
-          >
-            <Route index element={<ApplicantsPage />} />
-            <Route path=":applicantId" element={<ApplicantDetailsPage />} />
-          </Route>
-          <Route path="/roles" element={<RolesOutlet />}>
-            <Route index element={<PositionsPage />} />
-            <Route path="new" element={<RolesEditor />} />
-            <Route path="edit" element={<RolesEditor edit />} />
-          </Route>
-        </Routes>
+        <Navbar />
+        <div className="p-4">
+          <Routes>
+            <Route
+              path="/candidates/:positionId"
+              element={<ApplicantsPageOutlet />}
+            >
+              <Route index element={<ApplicantsPage />} />
+              <Route path=":applicantId" element={<ApplicantDetailsPage />} />
+            </Route>
+            <Route path="/roles" element={<RolesOutlet />}>
+              <Route index element={<PositionsPage />} />
+              <Route path="new" element={<RolesEditor />} />
+              <Route path="edit" element={<RolesEditor edit />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/roles" />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );

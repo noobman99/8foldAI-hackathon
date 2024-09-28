@@ -54,18 +54,18 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
         {/* Right column: Sections */}
         <div className="col-span-2 p-4">
           <div className="relative mb-10">
-            <h1 className="text-3xl font-bold mb-4 text-center">
+            <h1 className="text-4xl font-bold mb-4 text-center">
               {applicant[0]}
             </h1>
             <h3
-              className={`text-lg font-semibold mb-2 text-center ${text_color}`}
+              className={`text-xl font-semibold mb-2 text-center ${text_color}`}
             >
               Score: {applicant[1]}
             </h3>
           </div>
 
           {/* Skills Section */}
-          <div className="mb-6 p-8 bg-white rounded-xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
             <h2 className="text-xl font-bold mb-2">Skills</h2>
             <ul className="list-disc ml-6">
               {skills.map((skill, index) => (
@@ -78,7 +78,7 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
 
           {/* Work Experience Section */}
           {/* add box shadow to the div */}
-          <div className="mb-6 p-8 bg-white rounded-xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
             <h2 className="text-xl font-bold mb-2">Work Experience</h2>
             <ul className="list-disc ml-6">
               {workExperience.map((exp, index) => (
@@ -90,7 +90,7 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
           </div>
 
           {/* Recommendations Section */}
-          <div className="mb-6 p-8 bg-white rounded-xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
             <h2 className="text-xl font-bold mb-2">Recommendations</h2>
             <ul className="list-disc ml-6">
               {recommendations.map((rec, index) => (
@@ -105,7 +105,7 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
           </div>
 
           {/* Connections Section */}
-          <div className="mb-6 p-8 bg-white rounded-xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
             <h2 className="text-xl font-bold mb-2">Connections</h2>
             <ul className="list-disc ml-6">
               {connections.map((connection, index) => (
@@ -117,7 +117,7 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
           </div>
 
           <button
-            className="block bg-blue-500 text-white px-8 py-3 mx-auto rounded hover:bg-blue-600"
+            className="block bg-blue-500 text-white font-bold px-8 py-4 mx-auto rounded-xl hover:bg-blue-600"
             onClick={compare}
           >
             Compare
