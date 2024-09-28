@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Link,
   useLocation,
   useNavigate,
   useOutletContext,
@@ -38,11 +39,11 @@ const ApplicantsPage = () => {
           className="mb-4 absolute right-0 top-1/2"
           style={{ transform: "translateY(-50%)" }}
         >
-          <a href="/add-position">
+          <Link to={location.pathname + "/new"}>
             <button className="bg-blue-500 text-white px-6 py-3 rounded-xl hover:bg-blue-600">
               Add New Applicant
             </button>
-          </a>
+          </Link>
         </div>
       </div>
       

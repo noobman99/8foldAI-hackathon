@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import RolesOutlet from "./components/RolesOutlet";
 import ApplicantDetailsPage from "./pages/ApplicantDetailsPage";
 import ApplicantsPage from "./pages/ApplicantsPage";
+import NewApplicantPage from "./pages/NewApplicantPage";
 import RolesEditor from "./pages/RolesEditor";
 import PositionsPage from "./pages/RolesPage";
 import {
@@ -31,6 +32,7 @@ const App = () => {
               element={<ApplicantsPageOutlet />}
             >
               <Route index element={<ApplicantsPage />} />
+              <Route path="new" element={<NewApplicantPage />} />
               <Route path=":applicantId" element={<ApplicantDetailsPage />} />
             </Route>
             <Route path="/roles" element={<RolesOutlet />}>
