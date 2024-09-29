@@ -127,14 +127,14 @@ const uploadFiles = async (req, res) => {
     }
 
     if (files.resume) {
-      application.resume = files.resume[0].path.replace("/static/", "/");
+      application.resume = files.resume[0].path;
     }
 
     // console.log(files.recommendation);
 
     if (files.recommendation) {
-      application.recommendation = files.recommendation.map((file) =>
-        file.path.replace("/static/", "/")
+      application.recommendation = files.recommendation.map(
+        (file) => file.path
       );
 
       for (let recommendation of files.recommendation) {
