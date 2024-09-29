@@ -7,8 +7,8 @@ const roleSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    description: {
-      type: String,
+    expectations: {
+      type: [String],
     },
   },
   { timestamps: true }

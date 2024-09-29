@@ -7,8 +7,8 @@ const getRoles = async (req, res) => {
 };
 
 const createRole = async (req, res) => {
-  const { name, description } = req.body;
-  const role = new Role({ name, description });
+  const { name, expectations } = req.body;
+  const role = new Role({ name, expectations });
   await role.save();
   res.json(role);
 };
