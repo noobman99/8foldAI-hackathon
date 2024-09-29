@@ -70,7 +70,7 @@ const ApplicantsPage = () => {
               <tr
                 key={rowIndex}
                 className={"px-8 py-4 border-b border-gray-200 text-center hover:cursor-pointer hover:bg-gray-50" }
-                onClick={() => nav(rowIndex)}
+                onClick={() => nav(row.slice(-1))}
               >
                 {row.slice(0, 3).map((cell, cellIndex) => {
                   let textColor = "text-black";

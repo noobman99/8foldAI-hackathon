@@ -12,15 +12,19 @@ const ApplicantDetailsPage = () => {
 
   console.log(searchparams);
 
+  if (!applicants) {
+    return <></>
+  }
+
 
   if (!searchparams.size) {
-    return <ApplicantDetails applicantId={parseInt(applicantId)} applicant={applicants[applicantId]} />
+    return <ApplicantDetails applicantId={applicantId} />
   }
 
   return (
     <div className="w-full grid grid-cols-2">
-        <ApplicantDetails applicantId={searchparams.get("compare")} applicant={applicants[searchparams.get("compare")]}  isCompare />
-        <ApplicantDetails applicantId={parseInt(applicantId)} applicant={applicants[applicantId]} isCompare />
+        <ApplicantDetails applicantId={searchparams.get("compare")}  isCompare />
+        <ApplicantDetails applicantId={applicantId}  isCompare />
     </div>
   )
 };
