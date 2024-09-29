@@ -13,7 +13,7 @@ const RolesOutlet = () => {
             .then((data) => {
                 // convert data to json
                 console.log(data);
-                setRows(data.msg);
+                setRows(data.msg.map((row) => [row.name, row.viableApplications, row.applications ]));
             })
             .catch((error) => {
                 console.error("Error:", error);

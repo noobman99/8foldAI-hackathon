@@ -8,12 +8,14 @@ const THRESHOLD = 0.7;
 
 const getRoles = async (req, res) => {
   const roles = await Role.find({});
+  console.log(roles);
   var processed_roles = [];
   for (var i = 0; i < roles.length; i++) {
     const applications = await Application.find({ role: roles[i]._id });
     const viable_applications = applications.filter((application) => {
       return application.finalScore > THRESHOLD;
     });
+    console.log(viable_applications);
     processed_roles.push({
       name: roles[i].name,
       expectations: roles[i].expectations,
@@ -33,7 +35,9 @@ const createRole = async (req, res) => {
 
 const getApplicationsByRole = async (req, res) => {
   const { role } = req.params;
-  const applications = await Application.find({ role });
+  const applications = await Application.find({
+    role: role.replace(/-/g, " "),
+  });
   res.json({
     msg: applications.map((application) => {
       return {
