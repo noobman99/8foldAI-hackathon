@@ -1,9 +1,12 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate, useOutletContext } from "react-router-dom";
 
-const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
+const ApplicantDetails = ({ applicantId, isCompare = false }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const {applicants} = useOutletContext();
+
+  const [details, setDetails] = useState({});
 
   const compare = () => {
     const prefix = location.pathname.split("/").slice(0, -1).join("/");
@@ -13,14 +16,14 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
   // Get the applicant details from the context
 
   var text_color = useMemo(() => {
-    if (parseInt(applicant[1]) >= 90) {
+    if (parseInt(details.finalScore) >= 90) {
       return "text-green-500";
-    } else if (parseInt(applicant[1]) >= 50) {
+    } else if (parseInt(details.finalScore) >= 50) {
       return "text-orange-500";
     } else {
       return "text-red-600";
     }
-  }, [applicant]);
+  }, [details]);
 
   // Dummy data for the sections
   const skills = ["JavaScript", "React", "Node.js", "MongoDB"];
@@ -37,13 +40,22 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
 
   const connections = ["John Doe", "Jane Smith", "Sam Brown"];
 
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}/application/${applicantId}`)
+      .then((response) => response.json())
+      .then((data) => setDetails(data.msg))
+      .catch((e) => console.log(e));
+  }, [applicantId]);
+
+  console.log(details)
+
   return (
-    <div className={"py-8 px-4" + (isCompare ? "w-1/2 br-2" : "w-full")} >
+    <div className={"py-8 px-4" + (isCompare ? "w-1/2 br-2" : "w-full")}>
       <div className={isCompare ? "" : `grid grid-cols-5 gap-8`}>
         {/* Left column: PDF viewer */}
         <div className="col-span-3">
           <object
-            data="https://pdfobject.com/pdf/sample.pdf"
+            data={process.env.REACT_APP_BASE_URL + details.resume}
             type="application/pdf"
             width="95%"
             height={isCompare ? "500" : "100%"}
@@ -55,17 +67,23 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
         <div className="col-span-2 p-4">
           <div className="relative mb-10">
             <h1 className="text-4xl font-bold mb-4 text-center">
-              {applicant[0]}
+              {details.name}
             </h1>
             <h3
               className={`text-xl font-semibold mb-2 text-center ${text_color}`}
             >
-              Score: {applicant[1]}
+              Score: {details.finalScore}
             </h3>
           </div>
 
           {/* Skills Section */}
-          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div
+            className="mb-6 p-8 bg-white rounded-2xl"
+            style={{
+              boxShadow:
+                "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)",
+            }}
+          >
             <h2 className="text-xl font-bold mb-2">Skills</h2>
             <ul className="list-disc ml-6">
               {skills.map((skill, index) => (
@@ -78,7 +96,13 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
 
           {/* Work Experience Section */}
           {/* add box shadow to the div */}
-          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div
+            className="mb-6 p-8 bg-white rounded-2xl"
+            style={{
+              boxShadow:
+                "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)",
+            }}
+          >
             <h2 className="text-xl font-bold mb-2">Work Experience</h2>
             <ul className="list-disc ml-6">
               {workExperience.map((exp, index) => (
@@ -90,12 +114,20 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
           </div>
 
           {/* Recommendations Section */}
-          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div
+            className="mb-6 p-8 bg-white rounded-2xl"
+            style={{
+              boxShadow:
+                "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)",
+            }}
+          >
             <h2 className="text-xl font-bold mb-2">Recommendations</h2>
             <ul className="list-disc ml-6">
-              {recommendations.map((rec, index) => (
+              {details.recommendation && details.recommendation.map((rec, index) => (
                 <li key={index} className="mb-2">
-                  <span>{rec.recommendation}</span>
+                  <a href={process.env.REACT_APP_BASE_URL + rec} target="_blank">
+                    <span>Recommentation {index}</span>
+                  </a>
                   <span className="text-sm text-gray-600 ml-2">
                     Trust Score: {rec.trustScore}
                   </span>
@@ -105,7 +137,13 @@ const ApplicantDetails = ({ applicantId, applicant, isCompare = false }) => {
           </div>
 
           {/* Connections Section */}
-          <div className="mb-6 p-8 bg-white rounded-2xl" style={{"boxShadow": "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)"}}>
+          <div
+            className="mb-6 p-8 bg-white rounded-2xl"
+            style={{
+              boxShadow:
+                "0 0 10px rgba(0,0,0, 0.2), -5px 5px 10px rgba(0,0,0,0.1)",
+            }}
+          >
             <h2 className="text-xl font-bold mb-2">Connections</h2>
             <ul className="list-disc ml-6">
               {connections.map((connection, index) => (

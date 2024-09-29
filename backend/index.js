@@ -23,8 +23,8 @@ app.use("/api", (req, res, next) => {
 });
 app.use("/api", router);
 
-app.use("/resume", express.static("static/resume"));
-app.use("/recommendation", express.static("static/recommendation"));
+app.use("/static/resume", express.static("static/resume"));
+app.use("/static/recommendation", express.static("static/recommendation"));
 
 mongoose
   .connect(process.env.MONGODB_URI, {
