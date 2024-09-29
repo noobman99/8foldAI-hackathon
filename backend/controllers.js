@@ -32,8 +32,7 @@ const createRole = async (req, res) => {
 
 const getApplicationsByRole = async (req, res) => {
   const { role } = req.params;
-  const role_id = await Role.findOne({ name: role });
-  const applications = await Application.find({ role: role_id });
+  const applications = await Application.find({ role });
   res.json({
     msg: applications.map((application) => {
       return {
@@ -105,7 +104,7 @@ const uploadFiles = async (req, res) => {
       return res.json({ success: false, msg: "Resume not uploaded" });
     }
 
-    if (len(files.recommendation) > 5) {
+    if (files.recommendation.length > 5) {
       return res.json({
         success: false,
         msg: "Only 5 recommendations can be uploaded at max",
@@ -115,6 +114,9 @@ const uploadFiles = async (req, res) => {
     if (files.resume) {
       application.resume = files.resume[0].path;
     }
+
+    // console.log(files.recommendation);
+
     if (files.recommendation) {
       application.recommendation = files.recommendation.map(
         (file) => file.path

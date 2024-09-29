@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const Decimal128 = mongoose.Schema.Types.Decimal128;
-const recomendationSchema = new mongoose.Schema({
+const recommendationSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Application",
@@ -15,4 +15,4 @@ const recomendationSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Recomendation", recomendationSchema);
+module.exports = mongoose.model("Recommendation", recommendationSchema);

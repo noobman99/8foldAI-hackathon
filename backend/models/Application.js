@@ -9,8 +9,7 @@ const applicationSchema = new mongoose.Schema(
       trim: true,
     },
     role: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Role",
+      type: String,
     },
     resume: {
       type: String,
@@ -29,6 +28,12 @@ const applicationSchema = new mongoose.Schema(
     },
     experienceConsistency: {
       type: [String],
+    },
+    recoScore: {
+      type: Decimal128,
+    },
+    recoTrust: {
+      type: Decimal128,
     },
     finalScore: {
       type: Decimal128,
