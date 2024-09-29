@@ -1,38 +1,55 @@
 const Role = require("./models/Role");
 const Application = require("./models/Application");
+const multer = require("multer");
+const fs = require("fs");
+
+const THRESHOLD = 0.7;
 
 const getRoles = async (req, res) => {
-  const roles = await Role.find();
-  res.json(roles);
+  const roles = await Role.find({});
+  var processed_roles = [];
+  for (var i = 0; i < roles.length; i++) {
+    const applications = await Application.find({ role: roles[i]._id });
+    const viable_applications = applications.filter((application) => {
+      return application.finalScore > THRESHOLD;
+    });
+    processed_roles.push({
+      name: roles[i].name,
+      description: roles[i].description,
+      applications: applications.length,
+      viableApplications: viable_applications.length,
+    });
+  }
+  res.json({ msg: processed_roles });
 };
 
 const createRole = async (req, res) => {
   const { name, description } = req.body;
   const role = new Role({ name, description });
   await role.save();
-  res.json(role);
+  res.json({ msg: role._id, success: true });
 };
 
 const getApplicationsByRole = async (req, res) => {
   const { role } = req.params;
   const role_id = await Role.findOne({ name: role });
   const applications = await Application.find({ role: role_id });
-  res.json(
-    applications.map((application) => {
+  res.json({
+    msg: applications.map((application) => {
       return {
         name: application.name,
         score: application.finalScore,
         appliedOn: application.createdAt,
         id: application._id,
       };
-    })
-  );
+    }),
+  });
 };
 
 const getApplicationByUser = async (req, res) => {
   const { user } = req.params;
   const application = await Application.findById(user);
-  res.json(application);
+  res.json({ msg: application });
 };
 
 const createApplication = async (req, res) => {
@@ -40,7 +57,7 @@ const createApplication = async (req, res) => {
   const application = new Application({ name, role });
   await application.save();
 
-  res.json({ id: application._id });
+  res.json({ msg: application._id, success: true });
 };
 
 const uploadFiles = async (req, res) => {
@@ -48,7 +65,66 @@ const uploadFiles = async (req, res) => {
   const application = await Application.findById(user);
   // get files from request and save them to application
 
-  res.json({ success: true });
+  const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, `static/${file.fieldname}`);
+    },
+    filename: function (req, file, cb) {
+      cb(null, `${user}-${file.originalname}`);
+    },
+    fileFilter: function (req, file, cb) {
+      if (file.fieldname === "resume") {
+        if (file.mimetype === "application/pdf") {
+          cb(null, true);
+        } else {
+          cb(new Error("Invalid file type for resume"));
+        }
+      } else {
+        if (file.mimetype === ".txt") {
+          cb(null, true);
+        } else {
+          cb(new Error("Invalid file type for recommendation"));
+        }
+      }
+    },
+  });
+
+  const upload = multer({ storage }).fields([
+    { name: "resume", maxCount: 1 },
+    { name: "recommendation", maxCount: 5 },
+  ]);
+
+  upload(req, res, async (err) => {
+    if (err) {
+      console.log(err);
+      return res.json({ success: false });
+    }
+
+    const files = req.files;
+    if (!files.resume) {
+      return res.json({ success: false, msg: "Resume not uploaded" });
+    }
+
+    if (len(files.recommendation) > 5) {
+      return res.json({
+        success: false,
+        msg: "Only 5 recommendations can be uploaded at max",
+      });
+    }
+
+    if (files.resume) {
+      application.resume = files.resume[0].path;
+    }
+    if (files.recommendation) {
+      application.recommendation = files.recommendation.map(
+        (file) => file.path
+      );
+    }
+
+    await application.save();
+
+    res.json({ success: true });
+  });
 };
 
 module.exports = {
