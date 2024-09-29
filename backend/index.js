@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const router = require("./routes");
+const cors = require("cors");
+
+const bodyParser = require("body-parser");
 
 require("dotenv").config();
 
@@ -10,8 +13,14 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api", router);
+
+app.use("/resume", express.static("static/resume"));
+app.use("/recommendation", express.static("static/recommendation"));
 
 mongoose
   .connect(process.env.MONGODB_URI, {
