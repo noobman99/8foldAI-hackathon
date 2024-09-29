@@ -151,6 +151,50 @@ const uploadFiles = async (req, res) => {
     await application.save();
 
     res.json({ success: true });
+
+    var role = await Role.findOne({ name: application.role });
+    var ideal_skills = role.expectations;
+
+    let recommendations = await Recommendation.find({ user: user });
+    let recommendation_cycles = recommendations.map((rec) => rec.circular);
+    let cycle_count = 0;
+    for (let cycle of recommendation_cycles) {
+      if (cycle) {
+        cycle_count++;
+      }
+    }
+
+    // call the ML pipeline
+    // fetch("http://localhost:5000/user_analysis", {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     "name": application.name,
+    //     "role": application.role,
+    //     "resume": application.resume,
+    //     "recommendation": application.recommendation,
+    //     "ideal_skills_list": ideal_skills,
+    //   }),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((response) => response.json())
+    //   .then(async (data) => {
+    //     console.log(data);
+    //     application.skillScore = data.skills_relevance_score;
+    //     application.skillTrust = data.skills_trust_score;
+    //     application.experienceAccuracy = data.experience_vagueness_score;
+    //     application.experienceConsistency = data.timeline_analysis;
+    //     application.recoScore = data.reco_sentiment_score;
+    //     application.recoTrust = data.reco_trust_score;
+
+    //     application.finalScore = (2*application.skillScore - 0.5*application.skillTrust - 0.2*application.experienceAccuracy + 1.5*application.recoScore - cycle_count - 0.75*application.recoTrust) * 100 / 15;
+
+    //     await application.save();
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
   });
 };
 

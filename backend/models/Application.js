@@ -38,6 +38,13 @@ const applicationSchema = new mongoose.Schema(
     finalScore: {
       type: Decimal128,
     },
+    experience: {
+      type: String,
+    },
+    skills: {
+      type: String,
+    },
+
   },
   { timestamps: true }
 );
