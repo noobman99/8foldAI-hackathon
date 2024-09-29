@@ -110,6 +110,7 @@ const uploadFiles = async (req, res) => {
     }
 
     if (
+      files.recommendation &&
       !files.recommendation.every((file) => file.originalname.match(/ID_\d+/))
     ) {
       return res.json({
@@ -118,7 +119,7 @@ const uploadFiles = async (req, res) => {
       });
     }
 
-    if (files.recommendation.length > 5) {
+    if (files.recommendation && files.recommendation.length > 5) {
       return res.json({
         success: false,
         msg: "Only 5 recommendations can be uploaded at max",
