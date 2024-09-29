@@ -15,7 +15,7 @@ const getRoles = async (req, res) => {
     });
     processed_roles.push({
       name: roles[i].name,
-      description: roles[i].description,
+      expectations: roles[i].expectations,
       applications: applications.length,
       viableApplications: viable_applications.length,
     });
