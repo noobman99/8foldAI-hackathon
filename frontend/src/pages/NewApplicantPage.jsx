@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+
+const api = process.env.REACT_APP_API_URL;
 
 const NewApplicantPage = () => {
   const [resume, setResume] = useState(null); // State for uploaded resume PDF
   const [recommendations, setRecommendations] = useState([]); // State for multiple recommendation files
   const [candidateName, setCandidateName] = useState(""); // State for candidate name
-  const [role, setRole] = useState(""); // State for role
+  
+  //get path using useLocation
+  const location = useLocation();
+  // get second last path
+  const role = location.pathname.split("/").slice(-2)[0];  
 
   const handleResumeUpload = (e) => {
     setResume(e.target.files[0]);
@@ -20,6 +27,55 @@ const NewApplicantPage = () => {
   };
 
   const currentDate = new Date().toISOString().split("T")[0]; // Current date in 'yyyy-MM-dd' format
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!resume) {
+      alert("Please upload a resume");
+      return;
+    }
+
+    if (!candidateName) {
+      alert("Please enter candidate name");
+      return;
+    }
+    if (!role) {
+      alert("Please select a role");
+      return;
+    }
+
+    fetch(`${api}/application`, {
+      method: "POST",
+      body: JSON.stringify({
+        "name": candidateName,
+        "role": role,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const formData = new FormData();
+        // {files: {resume: File, recommendation: [File, File, ...]}}
+        formData.append("resume", resume);
+        recommendations.forEach((file) => formData.append("recommendation", file));
+
+        fetch(`${api}/application/${candidateName}`, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            alert(data.msg);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert(error);
+          });
+      }
+    );
+  }
 
   return (
     <div className="container mx-auto p-8">
@@ -74,7 +130,7 @@ const NewApplicantPage = () => {
           {/* Recommendations Section */}
           <div className="border p-4 rounded-md shadow-md flex flex-col h-full">
             <label className="block text-lg font-medium my-2 text-center">
-              Upload Recommendations (Multiple TXTs)
+              Upload Recommendations (Multiple .txt files)
             </label>
 
             {recommendations.length < 5 && (
@@ -153,19 +209,12 @@ const NewApplicantPage = () => {
             <label className="block text-lg font-medium mb-2">
               Role Applying For
             </label>
-            <select
+            <input
               value={role}
-              onChange={(e) => setRole(e.target.value)}
+              disabled
               className="block w-full text-sm border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-              <option value="" disabled>
-                Select a role
-              </option>
-              <option value="Software Engineer">Software Engineer</option>
-              <option value="Product Manager">Product Manager</option>
-              <option value="Data Analyst">Data Analyst</option>
-              <option value="UI/UX Designer">UI/UX Designer</option>
-            </select>
+            </input>
           </div>
 
           {/* Submit Button */}
@@ -173,6 +222,7 @@ const NewApplicantPage = () => {
             <button
               type="submit"
               className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              onClick={handleSubmit}
             >
               Submit Application
             </button>

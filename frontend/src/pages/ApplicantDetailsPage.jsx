@@ -3,6 +3,8 @@ import { useOutletContext, useParams, useSearchParams } from "react-router-dom";
 import ApplicantDetails from "../components/ApplicationDetails";
 // import samplePDF from './sample.pdf'; // Sample PDF file
 
+const api = process.env.REACT_APP_API_URL;
+
 const ApplicantDetailsPage = () => {
   const { applicantId } = useParams(); // Get the applicant ID from the route
   const [searchparams] = useSearchParams();

@@ -16,7 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+// log requests
+app.use("/api", (req, res, next) => {
+  console.log(req.method, req.url);
+  next();
+});
 app.use("/api", router);
 
 app.use("/resume", express.static("static/resume"));

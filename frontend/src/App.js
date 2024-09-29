@@ -38,7 +38,7 @@ const App = () => {
             <Route path="/roles" element={<RolesOutlet />}>
               <Route index element={<PositionsPage />} />
               <Route path="new" element={<RolesEditor />} />
-              <Route path="edit" element={<RolesEditor edit />} />
+              {/* <Route path="edit" element={<RolesEditor edit />} /> */}
             </Route>
             <Route path="*" element={<Navigate to="/roles" />} />
           </Routes>

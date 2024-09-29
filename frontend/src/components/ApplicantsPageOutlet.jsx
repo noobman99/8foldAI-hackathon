@@ -1,13 +1,22 @@
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 const ApplicantsPageOutlet = () => {
-    // Dummy data for the applicants (this can be dynamic)
-    const applicants = [
-        [ "John Doe", "45%",  "2023-08-15" ],
-        [ "Jane Smith", "92%",  "2023-08-17" ],
-        [ "Sam Brown", "78%", "2023-08-19" ],
-    ];
+    
+    const [applicants, setApplicants] = useState([]);
 
+    useEffect(() => {
+        fetch(`${api}/applicants`)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setApplicants(data.msg);
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert(error);
+            });
+    }, []);
 
     return (
         <>

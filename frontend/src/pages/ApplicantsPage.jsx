@@ -7,6 +7,8 @@ import {
   useParams,
 } from "react-router-dom";
 
+const api = process.env.REACT_APP_API_URL;
+
 const ApplicantsPage = () => {
   const { positionId } = useParams(); // Get the position ID from the route
   const location = useLocation();
