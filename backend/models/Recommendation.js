@@ -13,6 +13,9 @@ const recommendationSchema = new mongoose.Schema({
   blob: {
     type: String,
   },
+  from: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Recommendation", recommendationSchema);

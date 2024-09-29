@@ -1,5 +1,6 @@
 const Role = require("./models/Role");
 const Application = require("./models/Application");
+const Recommendation = require("./models/Recommendation");
 const multer = require("multer");
 const fs = require("fs");
 
@@ -104,6 +105,15 @@ const uploadFiles = async (req, res) => {
       return res.json({ success: false, msg: "Resume not uploaded" });
     }
 
+    if (
+      !files.recommendation.every((file) => file.originalname.match(/ID_\d+/))
+    ) {
+      return res.json({
+        success: false,
+        msg: "Recommendation file names should be in the format ID_<number>",
+      });
+    }
+
     if (files.recommendation.length > 5) {
       return res.json({
         success: false,
@@ -121,6 +131,17 @@ const uploadFiles = async (req, res) => {
       application.recommendation = files.recommendation.map(
         (file) => file.path
       );
+
+      for (let recommendation of files.recommendation) {
+        let sender = recommendation.originalname.match(/ID_\d+/);
+        let rec = new Recommendation({
+          user: user,
+          blob: recommendation.path,
+          from: sender[0],
+        });
+
+        await rec.save();
+      }
     }
 
     await application.save();
