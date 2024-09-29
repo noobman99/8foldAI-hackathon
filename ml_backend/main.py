@@ -13,7 +13,7 @@ class User(BaseModel):
     role: str
     pdf_path: str
     reco_txt_paths: list
-    ideal_skills_list: list
+    ideal_skills_list: str
 
 app = FastAPI()
 

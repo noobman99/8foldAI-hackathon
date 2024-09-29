@@ -1,0 +1,381 @@
+name,role,skillTrust,skillScore,recoTrust,recoScore,experienceAccuracy
+10,Operations Manager,4.0,4.0,4.0,4.0,4.0
+103,Accountant,4.0,4.0,5.0,4.0,2.0
+106,Finance Director,5.0,4.0,5.0,5.0,4.0
+107,Accountant,4.0,3.0,5.0,4.0,2.0
+108,Fitness Instructor,1.0,2.0,5.0,4.0,4.0
+113,Accountant,4.0,4.0,2.0,4.0,2.0
+114,Director/VP of Information Technology,5.0,5.0,5.0,5.0,4.0
+115,Operations Manager,1.0,3.0,4.0,5.0,2.0
+116,Human Resources Specialist,4.0,3.0,5.0,4.0,2.0
+122,Accountant,4.0,4.0,5.0,5.0,4.0
+127,Accountant,1.0,3.0,5.0,5.0,2.0
+129,Finance Director,4.0,3.0,5.0,4.0,2.0
+131,HR Director,1.0,4.0,4.0,4.0,4.0
+132,Finance Director,4.0,4.0,0.0,0.0,4.0
+133,Operations Manager,4.0,4.0,5.0,5.0,4.0
+135,Operations Manager,5.0,4.0,2.0,4.0,4.0
+137,Accountant,2.0,2.0,5.0,5.0,4.0
+142,Human Resources Specialist,4.0,4.0,5.0,5.0,4.0
+143,Finance Director,4.0,4.0,4.0,4.0,4.0
+146,Operations Manager,4.0,4.0,5.0,4.0,2.0
+147,Accountant,4.0,4.0,5.0,4.0,4.0
+149,Human Resources Specialist,5.0,4.0,5.0,5.0,4.0
+15,Operations Manager,1.0,4.0,2.0,4.0,4.0
+152,Accountant,5.0,4.0,4.0,4.0,4.0
+153,Accountant,4.0,4.0,5.0,4.0,2.0
+154,Accountant,4.0,2.0,4.0,5.0,0.0
+156,Finance Director,5.0,4.0,4.0,4.0,4.0
+161,Advocate,4.0,4.0,2.0,4.0,2.0
+169,Information Technology Manager,1.0,5.0,4.0,4.0,4.0
+17,Finance Director,5.0,3.0,4.0,5.0,4.0
+172,Human Resources Specialist,4.0,4.0,4.0,4.0,4.0
+174,Finance Manager,5.0,3.0,2.0,5.0,4.0
+178,Advocate,4.0,4.0,4.0,4.0,2.0
+180,HR Director,4.0,4.0,5.0,4.0,4.0
+181,Accountant,4.0,4.0,4.0,4.0,2.0
+182,Information Technology Manager,5.0,4.0,5.0,5.0,5.0
+183,HR Director,5.0,4.0,5.0,5.0,4.0
+186,HR Director,5.0,5.0,2.0,4.0,4.0
+188,Finance Manager,4.0,3.0,0.0,0.0,2.0
+191,Finance Director,4.0,4.0,4.0,5.0,4.0
+192,Human Resources Specialist,4.0,4.0,5.0,4.0,4.0
+193,Human Resources Specialist,,,5.0,5.0,
+194,Accountant,5.0,4.0,5.0,5.0,2.0
+195,Information Technology Manager,4.0,3.0,5.0,5.0,4.0
+20,HR Director,5.0,4.0,5.0,5.0,4.0
+203,Finance Director,4.0,4.0,5.0,5.0,2.0
+204,HR Director,4.0,4.0,5.0,4.0,2.0
+205,Accountant,4.0,4.0,5.0,5.0,4.0
+206,Accountant,4.0,4.0,2.0,4.0,4.0
+208,Fitness Instructor,4.0,2.0,5.0,4.0,4.0
+209,Finance Director,4.0,5.0,4.0,4.0,4.0
+214,Accountant,4.0,4.0,5.0,5.0,4.0
+215,Accountant,4.0,4.0,5.0,5.0,4.0
+217,Accountant,4.0,4.0,5.0,4.0,2.0
+220,Director/VP of Information Technology,5.0,5.0,5.0,4.0,4.0
+223,Fitness Instructor,3.0,2.0,2.0,4.0,2.0
+228,Accountant,4.0,3.0,5.0,4.0,4.0
+229,Human Resources Specialist,5.0,4.0,5.0,4.0,4.0
+230,Advocate,1.0,1.0,4.0,5.0,2.0
+24,Finance Director,4.0,4.0,5.0,5.0,4.0
+240,Human Resources Specialist,4.0,4.0,5.0,4.0,2.0
+242,HR Director,5.0,4.0,5.0,5.0,4.0
+246,Accountant,4.0,4.0,5.0,4.0,4.0
+255,Accountant,5.0,4.0,5.0,4.0,4.0
+256,Accountant,5.0,4.0,5.0,4.0,2.0
+258,Finance Manager,5.0,2.0,4.0,4.0,4.0
+259,Accountant,,,5.0,4.0,4.0
+26,HR Director,4.0,4.0,5.0,5.0,2.0
+260,Advocate,4.0,4.0,5.0,4.0,2.0
+261,Finance Director,4.0,3.0,5.0,4.0,2.0
+263,Accountant,5.0,4.0,2.0,4.0,4.0
+264,Customer Service Representative,4.0,3.0,4.0,4.0,2.0
+266,Finance Manager,5.0,3.0,5.0,5.0,4.0
+267,Customer Service Representative,1.0,4.0,5.0,4.0,2.0
+27,Fitness Instructor,4.0,2.0,5.0,4.0,4.0
+270,Human Resources Specialist,4.0,3.0,5.0,5.0,4.0
+271,Finance Director,4.0,5.0,5.0,4.0,4.0
+274,Operations Manager,4.0,5.0,5.0,4.0,4.0
+276,Finance Director,4.0,4.0,4.0,4.0,2.0
+277,HR Director,5.0,4.0,5.0,4.0,4.0
+281,Information Technology Manager,4.0,4.0,2.0,5.0,4.0
+282,Accountant,4.0,4.0,5.0,4.0,4.0
+283,Accountant,4.0,4.0,2.0,4.0,4.0
+284,Operations Manager,4.0,4.0,4.0,5.0,2.0
+285,Operations Manager,4.0,3.0,2.0,4.0,2.0
+286,Finance Director,4.0,4.0,5.0,5.0,4.0
+291,Fitness Instructor,3.0,2.0,5.0,4.0,2.0
+292,Finance Manager,1.0,4.0,5.0,5.0,4.0
+295,Operations Manager,4.0,3.0,5.0,5.0,4.0
+296,Human Resources Specialist,5.0,2.0,4.0,4.0,2.0
+298,Operations Manager,4.0,4.0,5.0,5.0,4.0
+299,Accountant,4.0,4.0,5.0,4.0,4.0
+3,Accountant,4.0,4.0,5.0,4.0,2.0
+30,Accountant,4.0,3.0,5.0,4.0,4.0
+300,Finance Director,5.0,4.0,5.0,5.0,4.0
+301,Accountant,5.0,5.0,5.0,5.0,2.0
+302,HR Director,5.0,4.0,5.0,5.0,4.0
+303,Human Resources Specialist,4.0,3.0,5.0,4.0,2.0
+304,Accountant,4.0,4.0,2.0,5.0,2.0
+307,Finance Director,4.0,5.0,5.0,5.0,4.0
+309,HR Director,4.0,4.0,5.0,5.0,2.0
+310,Accountant,4.0,4.0,5.0,5.0,2.0
+312,Director/VP of Information Technology,1.0,5.0,4.0,5.0,4.0
+315,Accountant,4.0,4.0,2.0,4.0,4.0
+318,Finance Director,4.0,3.0,4.0,4.0,2.0
+319,Human Resources Specialist,3.0,2.0,4.0,4.0,2.0
+322,Accountant,1.0,4.0,5.0,5.0,4.0
+324,Finance Director,5.0,5.0,4.0,4.0,4.0
+328,Information Technology Manager,4.0,4.0,5.0,4.0,4.0
+33,Accountant,4.0,4.0,5.0,4.0,4.0
+332,Accountant,4.0,4.0,4.0,4.0,2.0
+333,Finance Manager,4.0,4.0,2.0,5.0,2.0
+334,Fitness Instructor,4.0,3.0,5.0,4.0,4.0
+337,Customer Service Representative,,,5.0,4.0,2.0
+338,Customer Service Representative,1.0,4.0,5.0,5.0,2.0
+340,Customer Service Representative,3.0,3.0,4.0,4.0,2.0
+342,Accountant,5.0,4.0,2.0,4.0,2.0
+344,Fitness Instructor,3.0,2.0,5.0,4.0,2.0
+346,Accountant,4.0,4.0,4.0,4.0,4.0
+348,Human Resources Specialist,4.0,3.0,4.0,4.0,4.0
+349,Finance Director,4.0,4.0,5.0,4.0,4.0
+351,Customer Service Representative,4.0,3.0,2.0,4.0,2.0
+352,Director/VP of Information Technology,4.0,5.0,5.0,5.0,4.0
+353,Information Technology Manager,5.0,5.0,5.0,5.0,4.0
+355,Fitness Instructor,2.0,2.0,2.0,4.0,2.0
+360,Information Technology Manager,5.0,5.0,4.0,4.0,2.0
+363,Fitness Instructor,3.0,2.0,4.0,4.0,2.0
+367,HR Director,5.0,4.0,2.0,5.0,4.0
+369,Information Technology Manager,5.0,5.0,5.0,5.0,4.0
+376,Human Resources Specialist,4.0,4.0,4.0,5.0,4.0
+377,Finance Director,4.0,4.0,4.0,5.0,2.0
+378,Human Resources Specialist,4.0,3.0,5.0,5.0,4.0
+379,Finance Manager,4.0,4.0,5.0,4.0,2.0
+380,HR Director,4.0,4.0,2.0,5.0,2.0
+381,Accountant,4.0,4.0,5.0,5.0,4.0
+384,Accountant,4.0,3.0,5.0,4.0,2.0
+385,Fitness Instructor,,,5.0,4.0,1.0
+386,Operations Manager,4.0,3.0,5.0,4.0,2.0
+387,Accountant,4.0,4.0,5.0,4.0,4.0
+389,Finance Director,5.0,5.0,2.0,5.0,4.0
+394,HR Director,4.0,3.0,5.0,5.0,4.0
+397,Customer Service Representative,1.0,4.0,5.0,4.0,4.0
+4,Accountant,3.0,2.0,2.0,5.0,4.0
+403,Accountant,2.0,3.0,5.0,4.0,2.0
+404,Finance Manager,4.0,3.0,2.0,4.0,4.0
+406,Fitness Instructor,3.0,2.0,3.0,4.0,2.0
+42,Human Resources Specialist,1.0,4.0,5.0,4.0,4.0
+421,Information Technology Manager,4.0,4.0,5.0,4.0,4.0
+425,Information Technology Manager,4.0,4.0,2.0,4.0,2.0
+427,Advocate,4.0,4.0,2.0,4.0,2.0
+428,Accountant,4.0,4.0,2.0,4.0,2.0
+43,Human Resources Specialist,1.0,3.0,5.0,5.0,2.0
+430,Accountant,4.0,4.0,5.0,4.0,4.0
+431,Accountant,4.0,4.0,4.0,4.0,4.0
+435,Accountant,4.0,4.0,4.0,4.0,2.0
+436,Finance Director,4.0,3.0,5.0,5.0,2.0
+440,Finance Director,4.0,4.0,5.0,4.0,4.0
+442,Operations Manager,5.0,3.0,4.0,4.0,2.0
+455,Accountant,1.0,4.0,5.0,4.0,4.0
+458,HR Director,5.0,5.0,5.0,4.0,4.0
+46,Accountant,4.0,4.0,5.0,4.0,2.0
+463,Advocate,4.0,4.0,5.0,4.0,2.0
+464,Customer Service Representative,4.0,4.0,4.0,4.0,2.0
+465,Information Technology Manager,4.0,3.0,5.0,5.0,4.0
+467,Information Technology Manager,1.0,4.0,4.0,4.0,4.0
+47,Accountant,4.0,4.0,5.0,4.0,2.0
+475,Finance Director,4.0,4.0,5.0,4.0,4.0
+476,Fitness Instructor,4.0,2.0,2.0,4.0,2.0
+480,Finance Director,3.0,5.0,5.0,5.0,4.0
+481,Human Resources Specialist,1.0,3.0,5.0,5.0,2.0
+482,Finance Director,4.0,3.0,2.0,5.0,2.0
+483,Information Technology Manager,1.0,5.0,5.0,4.0,4.0
+487,Accountant,4.0,2.0,4.0,4.0,4.0
+489,Human Resources Specialist,4.0,4.0,5.0,4.0,4.0
+490,Customer Service Representative,5.0,4.0,5.0,5.0,2.0
+494,Information Technology Manager,4.0,5.0,5.0,5.0,2.0
+496,Accountant,4.0,4.0,5.0,4.0,2.0
+497,Accountant,4.0,4.0,2.0,5.0,4.0
+502,Finance Director,4.0,4.0,5.0,4.0,2.0
+505,Accountant,4.0,4.0,4.0,4.0,4.0
+506,Finance Director,5.0,4.0,4.0,4.0,4.0
+51,Information Technology Manager,4.0,3.0,2.0,4.0,2.0
+510,Accountant,4.0,4.0,2.0,4.0,2.0
+511,Director/VP of Information Technology,1.0,5.0,5.0,5.0,4.0
+514,Human Resources Specialist,4.0,4.0,5.0,4.0,4.0
+516,Finance Manager,4.0,4.0,5.0,5.0,2.0
+52,Accountant,,,5.0,4.0,4.0
+521,Finance Manager,5.0,4.0,4.0,5.0,4.0
+522,Information Technology Manager,4.0,4.0,5.0,5.0,4.0
+526,Human Resources Specialist,4.0,2.0,5.0,5.0,2.0
+530,Finance Manager,4.0,4.0,5.0,4.0,4.0
+531,Finance Director,5.0,5.0,5.0,4.0,4.0
+532,Human Resources Specialist,4.0,3.0,3.0,4.0,2.0
+537,Customer Service Representative,4.0,3.0,4.0,4.0,2.0
+54,Accountant,5.0,5.0,5.0,4.0,2.0
+540,Advocate,4.0,4.0,4.0,4.0,4.0
+542,Accountant,1.0,3.0,5.0,4.0,2.0
+547,Finance Director,4.0,4.0,4.0,4.0,2.0
+552,Information Technology Manager,5.0,4.0,5.0,4.0,4.0
+557,Finance Manager,4.0,4.0,4.0,4.0,4.0
+560,Director/VP of Information Technology,4.0,4.0,5.0,4.0,4.0
+566,Human Resources Specialist,5.0,3.0,4.0,4.0,4.0
+57,Operations Manager,2.0,2.0,2.0,4.0,2.0
+570,Customer Service Representative,5.0,4.0,2.0,4.0,2.0
+571,Human Resources Specialist,4.0,3.0,5.0,4.0,4.0
+572,Accountant,4.0,3.0,5.0,4.0,4.0
+576,HR Director,4.0,4.0,5.0,5.0,2.0
+579,Accountant,,,2.0,5.0,2.0
+58,HR Director,,,5.0,4.0,4.0
+580,Accountant,5.0,4.0,5.0,4.0,4.0
+581,Accountant,1.0,4.0,5.0,4.0,4.0
+585,Fitness Instructor,4.0,3.0,4.0,4.0,4.0
+589,Accountant,4.0,4.0,5.0,5.0,2.0
+592,Operations Manager,4.0,4.0,5.0,4.0,2.0
+593,HR Director,4.0,3.0,5.0,5.0,4.0
+594,Director/VP of Information Technology,4.0,5.0,5.0,5.0,4.0
+597,Advocate,4.0,4.0,5.0,5.0,4.0
+600,Finance Director,5.0,4.0,5.0,4.0,4.0
+602,Human Resources Specialist,1.0,4.0,5.0,4.0,4.0
+603,Accountant,5.0,4.0,0.0,0.0,4.0
+606,Accountant,4.0,3.0,5.0,4.0,2.0
+610,Finance Director,4.0,4.0,5.0,4.0,4.0
+614,Accountant,4.0,2.0,4.0,4.0,2.0
+615,Accountant,4.0,3.0,4.0,4.0,2.0
+622,Customer Service Representative,4.0,3.0,5.0,4.0,2.0
+623,Finance Director,5.0,4.0,5.0,4.0,4.0
+625,HR Director,,,5.0,5.0,4.0
+626,Finance Director,4.0,4.0,2.0,5.0,4.0
+627,Human Resources Specialist,4.0,4.0,5.0,5.0,4.0
+628,Human Resources Specialist,4.0,4.0,4.0,4.0,4.0
+629,Accountant,4.0,4.0,5.0,5.0,4.0
+631,Human Resources Specialist,5.0,4.0,4.0,4.0,4.0
+632,Operations Manager,4.0,4.0,4.0,4.0,2.0
+634,Accountant,4.0,5.0,2.0,4.0,4.0
+638,Advocate,4.0,4.0,5.0,4.0,1.0
+64,Advocate,4.0,4.0,5.0,4.0,2.0
+645,Advocate,4.0,4.0,5.0,4.0,2.0
+650,Accountant,4.0,4.0,5.0,4.0,2.0
+652,Accountant,1.0,4.0,4.0,5.0,4.0
+654,Human Resources Specialist,4.0,4.0,5.0,5.0,4.0
+66,Accountant,4.0,4.0,5.0,4.0,4.0
+660,Finance Director,4.0,4.0,5.0,5.0,4.0
+661,Human Resources Specialist,4.0,2.0,5.0,5.0,2.0
+666,HR Director,4.0,4.0,4.0,4.0,4.0
+667,Finance Director,4.0,4.0,5.0,5.0,4.0
+668,Fitness Instructor,4.0,2.0,2.0,4.0,2.0
+669,Finance Manager,4.0,4.0,5.0,4.0,4.0
+67,Information Technology Manager,4.0,4.0,5.0,4.0,2.0
+675,Human Resources Specialist,5.0,3.0,5.0,4.0,4.0
+676,Accountant,4.0,4.0,4.0,4.0,4.0
+677,Director/VP of Information Technology,4.0,5.0,0.0,0.0,4.0
+68,HR Director,5.0,4.0,5.0,5.0,2.0
+682,Human Resources Specialist,5.0,4.0,5.0,5.0,4.0
+689,Accountant,4.0,4.0,5.0,5.0,4.0
+69,Customer Service Representative,4.0,4.0,5.0,5.0,2.0
+691,Operations Manager,4.0,3.0,4.0,4.0,2.0
+692,Accountant,4.0,4.0,4.0,4.0,2.0
+693,Accountant,4.0,4.0,5.0,4.0,2.0
+696,Fitness Instructor,3.0,1.0,5.0,5.0,2.0
+697,Finance Director,5.0,4.0,5.0,4.0,4.0
+7,Human Resources Specialist,4.0,3.0,5.0,5.0,2.0
+704,Director/VP of Information Technology,4.0,5.0,5.0,4.0,4.0
+705,Director/VP of Information Technology,4.0,5.0,5.0,5.0,4.0
+707,Accountant,4.0,4.0,2.0,4.0,2.0
+71,Human Resources Specialist,4.0,3.0,4.0,4.0,2.0
+710,Accountant,4.0,4.0,5.0,4.0,4.0
+718,Customer Service Representative,4.0,4.0,4.0,4.0,2.0
+719,Advocate,1.0,1.0,2.0,5.0,4.0
+725,Human Resources Specialist,1.0,3.0,4.0,4.0,2.0
+726,Accountant,4.0,4.0,4.0,5.0,2.0
+73,Customer Service Representative,4.0,3.0,4.0,4.0,2.0
+733,Human Resources Specialist,5.0,4.0,5.0,5.0,4.0
+735,Director/VP of Information Technology,4.0,5.0,5.0,5.0,5.0
+739,Human Resources Specialist,4.0,3.0,4.0,5.0,2.0
+74,Director/VP of Information Technology,5.0,5.0,5.0,5.0,4.0
+744,Director/VP of Information Technology,5.0,5.0,5.0,5.0,4.0
+746,Operations Manager,3.0,2.0,5.0,4.0,2.0
+748,Finance Director,4.0,4.0,4.0,4.0,4.0
+749,Accountant,4.0,4.0,5.0,4.0,4.0
+75,Accountant,4.0,4.0,5.0,4.0,4.0
+750,Information Technology Manager,4.0,5.0,5.0,4.0,4.0
+752,Human Resources Specialist,4.0,3.0,5.0,2.0,2.0
+758,Advocate,4.0,4.0,4.0,4.0,2.0
+761,Director/VP of Information Technology,4.0,5.0,5.0,5.0,4.0
+763,Accountant,4.0,4.0,5.0,4.0,2.0
+767,Director/VP of Information Technology,5.0,5.0,5.0,5.0,4.0
+769,Accountant,5.0,4.0,4.0,4.0,2.0
+772,Human Resources Specialist,4.0,4.0,4.0,4.0,2.0
+773,Accountant,4.0,4.0,5.0,5.0,4.0
+774,Human Resources Specialist,4.0,2.0,5.0,4.0,2.0
+775,Director/VP of Information Technology,4.0,5.0,5.0,4.0,4.0
+776,Accountant,4.0,4.0,5.0,4.0,2.0
+78,Fitness Instructor,4.0,3.0,5.0,4.0,2.0
+780,Advocate,4.0,4.0,4.0,5.0,2.0
+784,Accountant,4.0,3.0,2.0,4.0,2.0
+79,Advocate,5.0,5.0,2.0,4.0,2.0
+790,Accountant,5.0,4.0,5.0,5.0,4.0
+792,Human Resources Specialist,3.0,2.0,2.0,4.0,2.0
+795,Operations Manager,5.0,4.0,4.0,4.0,4.0
+797,Accountant,4.0,4.0,5.0,5.0,4.0
+799,Fitness Instructor,3.0,2.0,5.0,4.0,2.0
+80,Advocate,4.0,4.0,2.0,4.0,2.0
+802,Accountant,5.0,5.0,2.0,4.0,4.0
+804,Accountant,5.0,4.0,5.0,4.0,4.0
+808,Accountant,4.0,4.0,5.0,4.0,4.0
+811,Operations Manager,4.0,3.0,5.0,5.0,2.0
+812,Human Resources Specialist,3.0,2.0,5.0,4.0,2.0
+819,Finance Director,1.0,4.0,5.0,4.0,4.0
+821,Accountant,5.0,4.0,5.0,4.0,4.0
+828,Accountant,5.0,4.0,5.0,5.0,4.0
+830,Human Resources Specialist,4.0,2.0,5.0,5.0,2.0
+832,Human Resources Specialist,5.0,4.0,4.0,4.0,4.0
+835,Human Resources Specialist,4.0,2.0,5.0,4.0,2.0
+836,Operations Manager,4.0,4.0,5.0,4.0,2.0
+837,Human Resources Specialist,4.0,2.0,5.0,4.0,2.0
+838,Finance Director,4.0,4.0,5.0,5.0,4.0
+841,Accountant,5.0,4.0,2.0,4.0,4.0
+844,Finance Manager,4.0,4.0,4.0,4.0,4.0
+846,Advocate,4.0,4.0,0.0,2.0,2.0
+849,Human Resources Specialist,3.0,3.0,2.0,5.0,2.0
+850,Accountant,1.0,4.0,5.0,4.0,4.0
+852,Human Resources Specialist,5.0,4.0,5.0,5.0,4.0
+854,Director/VP of Information Technology,4.0,5.0,5.0,5.0,4.0
+857,Accountant,4.0,4.0,5.0,4.0,4.0
+858,Accountant,4.0,4.0,5.0,4.0,4.0
+86,Human Resources Specialist,4.0,3.0,5.0,4.0,2.0
+862,Accountant,4.0,4.0,5.0,5.0,2.0
+864,Advocate,4.0,4.0,5.0,4.0,2.0
+865,Customer Service Representative,4.0,4.0,5.0,4.0,2.0
+87,Advocate,4.0,4.0,4.0,4.0,2.0
+871,Accountant,4.0,4.0,0.0,0.0,2.0
+876,Operations Manager,,,0.0,0.0,
+879,Accountant,4.0,3.0,4.0,4.0,2.0
+88,Customer Service Representative,1.0,2.0,5.0,4.0,2.0
+880,Director/VP of Information Technology,4.0,5.0,5.0,4.0,4.0
+882,Accountant,3.0,3.0,5.0,4.0,0.0
+884,Finance Director,5.0,5.0,5.0,5.0,4.0
+886,Finance Director,4.0,3.0,5.0,4.0,2.0
+887,Finance Manager,4.0,4.0,5.0,5.0,2.0
+889,Accountant,1.0,4.0,5.0,5.0,4.0
+89,Advocate,4.0,4.0,5.0,4.0,2.0
+891,Human Resources Specialist,1.0,4.0,4.0,5.0,2.0
+892,Human Resources Specialist,4.0,3.0,5.0,4.0,2.0
+893,Accountant,3.0,3.0,5.0,4.0,4.0
+895,Advocate,5.0,5.0,2.0,4.0,2.0
+9,Customer Service Representative,4.0,4.0,5.0,5.0,4.0
+90,Human Resources Specialist,4.0,2.0,4.0,4.0,4.0
+906,Human Resources Specialist,4.0,2.0,5.0,4.0,2.0
+907,Advocate,4.0,4.0,5.0,4.0,4.0
+909,Accountant,1.0,4.0,4.0,4.0,2.0
+91,Human Resources Specialist,4.0,4.0,0.0,0.0,2.0
+913,Director/VP of Information Technology,5.0,5.0,5.0,5.0,2.0
+919,Operations Manager,5.0,5.0,2.0,4.0,4.0
+92,Accountant,4.0,4.0,4.0,5.0,4.0
+923,Advocate,1.0,1.0,5.0,5.0,2.0
+928,Director/VP of Information Technology,5.0,4.0,5.0,5.0,4.0
+929,Accountant,4.0,4.0,5.0,5.0,2.0
+93,Human Resources Specialist,5.0,4.0,5.0,5.0,4.0
+934,Operations Manager,4.0,3.0,5.0,5.0,2.0
+935,HR Director,4.0,4.0,5.0,4.0,4.0
+943,Human Resources Specialist,4.0,3.0,5.0,5.0,2.0
+945,Human Resources Specialist,1.0,3.0,5.0,4.0,2.0
+949,Information Technology Manager,5.0,4.0,2.0,4.0,4.0
+950,Accountant,4.0,4.0,5.0,4.0,2.0
+951,Director/VP of Information Technology,4.0,5.0,5.0,4.0,4.0
+952,Accountant,5.0,5.0,5.0,4.0,4.0
+953,Accountant,5.0,5.0,4.0,4.0,4.0
+96,Director/VP of Information Technology,5.0,5.0,5.0,5.0,4.0
+963,Accountant,1.0,4.0,5.0,5.0,4.0
+964,Advocate,4.0,4.0,5.0,4.0,2.0
+965,Accountant,2.0,3.0,5.0,4.0,2.0
+966,Advocate,4.0,4.0,4.0,4.0,4.0
+973,Human Resources Specialist,4.0,2.0,5.0,5.0,2.0
+976,Accountant,4.0,5.0,5.0,5.0,4.0
+977,Accountant,5.0,4.0,5.0,4.0,2.0
+98,Accountant,5.0,4.0,4.0,4.0,2.0
+980,Accountant,5.0,5.0,5.0,4.0,2.0
+988,Director/VP of Information Technology,1.0,5.0,5.0,4.0,4.0
+99,Accountant,4.0,4.0,5.0,5.0,4.0
+993,Operations Manager,4.0,4.0,4.0,5.0,4.0

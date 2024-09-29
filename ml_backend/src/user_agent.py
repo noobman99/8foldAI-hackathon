@@ -12,7 +12,7 @@ class UserAgent:
         self.reco_agent = RecoAgent()
         self.experience_agent = ExperienceAgent()
 
-    def get_user_analysis(self, role: str, pdf_path: str, reco_txt_paths: list, ideal_skills_list: list):
+    def get_user_analysis(self, role: str, pdf_path: str, reco_txt_paths: list, ideal_skills_list):
         full_text = self.extraction_agent.get_pdf_text(pdf_path)
         sections = self.extraction_agent.get_sections(full_text)
         experience = sections.get("experience", "")
